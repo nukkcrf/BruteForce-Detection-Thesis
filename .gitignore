@@ -1,0 +1,14 @@
+# Visual Studio
+.vs/
+bin/
+obj/
+*.user
+*.suo
+
+# Build results
+*.exe
+*.dll
+*.pdb
+
+# Screenshots (add manually later)
+screenshots/
