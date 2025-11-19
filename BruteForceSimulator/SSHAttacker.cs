@@ -4,6 +4,23 @@ using Renci.SshNet.Common;
 
 using System;
 
+
+/*
+ SSHAttacker använder SSH.NET-biblioteket för att attackera Linux-servrar.
+Processen är:
+Skapa en ConnectionInfo med hostname, port, username och lösenord
+Sätt timeout till 5 sekunder (viktigt för att inte hänga)
+Försök ansluta med SshClient
+Jag använder try-catch för att hantera olika fel:
+SshAuthenticationException - perfekt! Det betyder misslyckad inloggning, vilket är vad vi vill
+SshConnectionException - nätverksproblem
+Andra exceptions - oväntade fel
+När SSH-autentisering misslyckas skriver Linux '/var/log/auth.log' med 'Failed password' - det är vad Splunk samlar in.
+Timeout är kritisk - utan den kan programmet hänga i flera minuter om nätverket är långsamt.
+Metoden returnerar true när en failed login genererades framgångsrikt."
+ 
+ */
+
 namespace BruteForceSimulator
 {
     public class SSHAttacker

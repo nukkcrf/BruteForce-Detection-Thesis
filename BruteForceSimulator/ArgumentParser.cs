@@ -1,5 +1,11 @@
 ﻿using System;
 
+
+
+/* argumentparser hanterar kommandoradsargument för att konfigurera attacken.*
+ 
+ 
+ */
 namespace BruteForceSimulator
 {
     public class ArgumentParser

@@ -1,5 +1,22 @@
 ﻿using System;
 
+
+
+/* 
+1. Parsar kommandoradsargument och skapar en konfiguration*
+2. Kör attacken med hjälp av AttackExecutor*
+3. Visar resultat med statistik*
+
+*Jag har hållit Main-metoden kort och läsbar. All logik ligger i separata klasser, vilket gör koden lättare att testa och underhålla.*
+
+*DisplayResults-metoden visar hur många försök som gjordes, hur lång tid det tog, och hur många attacker per sekund. 
+
+*Den föreslår också vilken Splunk-query man ska köra för att se resultaten."
+
+ */
+
+
+
 namespace BruteForceSimulator
 {
     class Program

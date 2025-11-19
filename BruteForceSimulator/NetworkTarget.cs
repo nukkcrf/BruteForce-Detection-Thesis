@@ -11,7 +11,7 @@ namespace BruteForceSimulator
         public string Host { get; set; }
         public AttackProtocol Protocol { get; set; }
         public int Port { get; set; }
-        public string Username { get; set; }
+        public string Username { get; set; } = string.Empty;
 
         public NetworkTarget(string host, AttackProtocol protocol)
         {

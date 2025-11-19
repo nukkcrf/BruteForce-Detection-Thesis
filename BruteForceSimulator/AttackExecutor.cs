@@ -1,6 +1,31 @@
 ﻿using System;
 using System.Threading;
 
+
+
+/*
+ *AttackExecutor orkestrerar hela attacken.*
+
+*Execute-metoden loopar genom:*
+
+1. *Alla targets (maskiner)*
+2. *Alla usernames*
+3. *Alla försök per användare*
+
+*För varje försök anropar den ExecuteAttack som väljer rätt attackmetod baserat på protokollet.*
+
+*Jag använder en switch-sats för att delegera till rätt attacker-klass:*
+
+- *WindowsLocal → WindowsAttacker*
+- *SSH → SSHAttacker*
+- *RDP → RDPAttacker*
+
+*Varje lyckat genererat försök markeras med 'X', misslyckade med '.'. Detta ger visuell feedback i realtid.*
+
+*Thread.Sleep mellan försök är viktigt - det simulerar en realistisk attack. 
+*En riktig attackerare kan inte göra tusentals försök per sekund."*
+
+ */
 namespace BruteForceSimulator
 {
     public class AttackExecutor
